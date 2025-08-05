@@ -6,9 +6,39 @@
 
 int main() {
     // Nível Novato - Posicionamento dos Navios
-    // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
-    // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
+    //1. Represente o Tabuleiro
+    int tabuleiro[10][10] = {
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0},
+      {0,0,0,0,0,0,0,0,0,0}
+    };
+    //2. Posicione os Navios
+    int navio1[3] = {3, 3, 3};
+    int navio2[3] = {3, 3, 3};
+
+        //Posicionando Navio 1
+    for(int i = 0; i < 3; i++){
+        tabuleiro[3][i+2] = navio1[i];
+    }
+        //Posicionando Navio 2
+    for(int i = 0; i < 3; i++){
+        tabuleiro[i + 5][5] = navio2[i];
+    }
+
+    //Exibir o Tabuleiro
+    for(int y = 0; y < 10; y++){
+        for(int x = 0; x < 10; x++){
+            printf("%d", tabuleiro[y][x]);
+        }
+        printf("\n");
+    }
 
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
@@ -25,7 +55,7 @@ int main() {
     // 0 0 1 0 0
     // 0 1 1 1 0
     // 1 1 1 1 1
-    
+
     // Exemplo para habilidade em octaedro:
     // 0 0 1 0 0
     // 0 1 1 1 0
