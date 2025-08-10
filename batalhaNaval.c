@@ -104,8 +104,9 @@ int main() {
         for(int x = 0; x < COLUNAS; x++){
             printf("%d ", tabuleiro[y][x]);
         }
+        printf("|");
         printf("\n");
     }
-    
+    printf("   ---------------------\n");
     return 0;
 }
